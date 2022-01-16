@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC -//Apple Computer//DTD PLIST 1.0//EN
+http://www.apple.com/DTDs/PropertyList-1.0.dtd>
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>nl.mjanssen.restic_backup_remote</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/local/bin/flock</string>
+        <string>-n</string>
+        <string>/Users/marco/restic/.restic_remote.lock</string>
+        <string>/Users/marco/restic/restic_backup_remote.sh</string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>StartInterval</key>
+    <integer>300</integer>
+    
+    <key>WorkingDirectory</key>
+    <string>/Users/marco/</string>
+    
+    <key>StandardOutPath</key>
+    <string>/Users/marco/restic/log/nl.mjanssen.restic_backup_remote.out.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/marco/restic/log/nl.mjanssen.restic_backup_remote.error.log</string>
+</dict>
+</plist>
