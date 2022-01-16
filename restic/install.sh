@@ -19,6 +19,8 @@ security add-generic-password -s backup-restic-aws-secret-access-key -a restic_b
 echo "Creating directories"
 mkdir -p  ~/restic/log ~/restic/hooks ~/restic/config 
 
+cp -R ./* ~/restic/
+
 cp ~/restic/*.plist ~/Library/LaunchAgents
 launchctl load ~/Library/LaunchAgents/nl.mjanssen.restic_backup_remote.plist
 launchctl load ~/Library/LaunchAgents/nl.mjanssen.restic_check_remote.plist
