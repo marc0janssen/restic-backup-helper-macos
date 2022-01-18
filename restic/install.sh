@@ -1,4 +1,9 @@
-#!/bin/sh
+#!/bin/bash
+
+# Name: Restic Backup Helper MacOS
+# Coder: Marco Janssen (twitter @marc0janssen)
+# date: 2022-01-16 22:43:01
+# update: 2022-01-16 22:43:05
 
 echo "***************************************************"
 echo "*** Setting up Restic Buckup Helper MacOS 1.0.0 ***"
@@ -19,6 +24,7 @@ security add-generic-password -s backup-restic-aws-secret-access-key -a restic_b
 echo "Creating directories"
 mkdir -p  ~/restic/log ~/restic/hooks ~/restic/config 
 
+echo "Coping files"
 cp -R ./* ~/restic/
 
 cp ~/restic/*.plist ~/Library/LaunchAgents

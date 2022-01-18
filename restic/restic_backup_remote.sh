@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Name: Restic Backup Helper MacOS
+# Coder: Marco Janssen (twitter @marc0janssen)
+# date: 2022-01-16 22:43:01
+# update: 2022-01-16 22:43:05
+
 export RESTIC_TAG
 export RESTIC_FORGET_ARGS
 export MAILX_ON_ERROR
@@ -115,8 +120,8 @@ fi
 end=$(date +%s)
 echo "Finished Backup at $(date +"%Y-%m-%d %H:%M:%S") after $((end-start)) seconds"
 
-if { [ -n "${MAILX_ARGS}" ] && [ "${MAILX_ON_ERROR}" == "ON" ] && [[ $backupRC != 0 ]] ;} || { [ -n "${MAILX_ARGS}" ] && [ "${MAILX_ON_ERROR}" != "ON" ] ;}; then
-    if sh -c "cat ${lastLogfile} | mail -v -s 'Result of the last ${HOSTNAME} backup run on ${RESTIC_REPOSITORY}' ${MAILX_ARGS} > ${lastMailLogfile} 2>&1" == 0 ; then
+if { [ -n "${MAILX_ARGS}" ] && [ "${MAILX_ON_ERROR}" == "ON" ] && [[ $backupRC != 0 ]]; } || { [ -n "${MAILX_ARGS}" ] && [ "${MAILX_ON_ERROR}" != "ON" ]; }; then
+    if sh -c "cat ${lastLogfile} | mail -v -s 'Result of the last ${HOSTNAME} backup run on ${RESTIC_REPOSITORY}' ${MAILX_ARGS} > ${lastMailLogfile} 2>&1"; then
         echo "Mail notification successfully sent."
     else
         echo "Sending mail notification FAILED. Check ${lastMailLogfile} for further information."
