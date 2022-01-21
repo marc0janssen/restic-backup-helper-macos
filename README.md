@@ -13,7 +13,7 @@
 * Select "Full Disk Access" from the left pane
 * Then drag and drop "sh" from the FInder to the right pane in "Full Disk Access"
 
-[![drag and drop /bin/sh](/media/full_disk_access_sh.gif)](/media/full_disk_access_sh.gif)
+[![drag and drop /bin/sh](https://github.com/marc0janssen/restic-backup-helper-macos/media/full_disk_access_sh.gif)](https://github.com/marc0janssen/restic-backup-helper-macos/media/full_disk_access_sh.gif)
  
 
 ADD /bin/sh ==> full disk access
