@@ -15,24 +15,31 @@
 
 ![Drag And Drop /bin/sh](https://github.com/marc0janssen/restic-backup-helper-macos/blob/main/media/full_disk_access_sh.gif?raw=true "Drag And Drop /bin/sh")
 
-### Install 'flock'"
+### Install 'flock'
 
 ```shell
 brew tap discoteq/discoteq
 brew install flock
 ```
 
-### Install 'restic'"
+### Install 'restic'
 
 ``` shell
 brew install restic
 ```
 
+### Config 'Postfix'
 
 Step 1. Edit Postfix config file
 
+``` shell
 sudo vi /etc/postfix/main.cf
+```
 
+Now add the following lines at the very end of the file:
+(note: You can use any mailprovider you want, here an example with Gmail)
+
+```shell
 #Gmail SMTP
 relayhost=smtp.gmail.com:587
 # Enable SASL authentication in the Postfix SMTP client.
@@ -44,25 +51,45 @@ smtp_sasl_mechanism_filter=plain
 smtp_use_tls=yes
 smtp_tls_security_level=encrypt
 tls_random_source=dev:/dev/urandom
+```
 
 Step 2. Create the sasl_passwd file
+
+```shell
 sudo vi /etc/postfix/sasl_passwd
 smtp.gmail.com:587 your_email@gmail.com:your_password
 sudo postmap /etc/postfix/sasl_passwd
+```
 
 Step 3. Restart Postfix
+
+```shell
 sudo postfix reload
+```
 
 Step 4. Turn on less secure apps (Only Gmail)
+
+```shell
 SASL authentication failed
+```
 
 Step 5. Test it!
+
+```shell
 date | mail -s testing your_email@gmail.com
 mailq
 tail -f /var/log/mail.log
+```
 
+### Install 'Restic Backup Helper MacOS'
 
-Acknowledgements:
-https://szymonkrajewski.pl/macos-backup-restic/
-https://github.com/lobaro/restic-backup-docker
-https://www.developerfiles.com/how-to-send-emails-from-localhost-mac-os-x-el-capitan/
+Step 1. Download this package to your download directory on your Mac
+Step 2. Run the 'install.sh' script
+step 3. Fill out the 4 questions asked from the script
+step 4. **All Systems Are Go Go GO**
+
+## Acknowledgements
+
+[https://szymonkrajewski.pl/macos-backup-restic/](https://szymonkrajewski.pl/macos-backup-restic/)
+[https://github.com/lobaro/restic-backup-docker](https://github.com/lobaro/restic-backup-docker)
+[https://www.developerfiles.com/how-to-send-emails-from-localhost-mac-os-x-el-capitan/](https://www.developerfiles.com/how-to-send-emails-from-localhost-mac-os-x-el-capitan/)
