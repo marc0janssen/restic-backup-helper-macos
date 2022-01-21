@@ -15,12 +15,18 @@
 
 ![Drag And Drop /bin/sh](https://github.com/marc0janssen/restic-backup-helper-macos/blob/main/media/full_disk_access_sh.gif?raw=true "Drag And Drop /bin/sh")
 
-DD /bin/sh ==> full disk access
+### Install 'flock'"
 
+```shell
 brew tap discoteq/discoteq
 brew install flock
+```
 
+### Install 'restic'"
+
+``` shell
 brew install restic
+```
 
 
 Step 1. Edit Postfix config file
