@@ -2,7 +2,7 @@
 
 ## SETUP
 
-### Give /bin/sh "full disk access"
+### /bin/sh "full disk access"
 
 * Open the Finder
 * In the menu select GO -> Go To Folder...
