@@ -90,6 +90,6 @@ step 4. **All Systems Are Go Go GO**
 
 ## Acknowledgements
 
-[https://szymonkrajewski.pl/macos-backup-restic/](https://szymonkrajewski.pl/macos-backup-restic/)
-[https://github.com/lobaro/restic-backup-docker](https://github.com/lobaro/restic-backup-docker)
+[https://szymonkrajewski.pl/macos-backup-restic/](https://szymonkrajewski.pl/macos-backup-restic/)\
+[https://github.com/lobaro/restic-backup-docker](https://github.com/lobaro/restic-backup-docker)\
 [https://www.developerfiles.com/how-to-send-emails-from-localhost-mac-os-x-el-capitan/](https://www.developerfiles.com/how-to-send-emails-from-localhost-mac-os-x-el-capitan/)
