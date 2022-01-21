@@ -83,22 +83,29 @@ tail -f /var/log/mail.log
 
 ### Install 'Restic Backup Helper MacOS'
 
-Step 1.
+Step 1.\
 Download this package to your download directory on your Mac\
 
-Step 2. Unzip the package\
+Step 2.\
+Unzip the package\
 
-Step 3. Edit nl.mjanssen.restic_backup_remote.plist and nl.mjanssen.restic_check_remote.plist to match your HOME directory\
+Step 3.\
+Edit nl.mjanssen.restic_backup_remote.plist and nl.mjanssen.restic_check_remote.plist to match your HOME directory\
 
-Step 4. Edit backup.conf and email.conf to your liking. (email.conf hold the addresses with receive the backlog, backup.conf holds the subdirectories from your $HOME to get backuped)\
+Step 4.\
+Edit backup.conf and email.conf to your liking. (email.conf hold the addresses with receive the backlog, backup.conf holds the subdirectories from your $HOME to get backuped)\
 
-Step 5. Set up the variables in "restic_backup_remote.sh" and "restic_check_remote,sh" to your liking\
+Step 5.\
+Set up the variables in "restic_backup_remote.sh" and "restic_check_remote,sh" to your liking\
 
-Step 6. Run the 'install.sh' script\
+Step 6.\
+Run the 'install.sh' script\
 
-step 7. Fill out the 4 questions asked from the script\
+step 7.\
+Fill out the 4 questions asked from the script\
 
-step 8. **All Systems Are Go Go GO**
+step 8.\
+**All Systems Are Go Go GO**
 
 ## Acknowledgements
 
