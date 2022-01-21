@@ -83,7 +83,8 @@ tail -f /var/log/mail.log
 
 ### Install 'Restic Backup Helper MacOS'
 
-Step 1. Download this package to your download directory on your Mac\
+Step 1.
+Download this package to your download directory on your Mac\
 
 Step 2. Unzip the package\
 
