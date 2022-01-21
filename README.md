@@ -1,5 +1,20 @@
 # restic-backup-helper-macos
 
+## SETUP
+
+### Give /bin/sh "full disk access"
+
+* Open the Finder
+* In the menu select GO -> Go To Folder...
+* Enter /bin
+* Then open System preferences of your Mac
+* Open "Security and Privacy"
+* Select the padlock bottomleft and unlock it
+* Select "Full Disk Access" from the left pane
+* Then drag and drop "sh" from the FInder to the right pane in "Full Disk Access"
+
+[![drag and drop /bin/sh](/media/full_disk_access_sh.gif)](/media/full_disk_access_sh.gif)
+ 
 
 ADD /bin/sh ==> full disk access
 
